@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <h1><strong>Ur responce has been recorded </strong></h1>
+        <h1>Patient: {{ name }}</h1>
+        <p>Blood Type: {{ blood }}</p>
+
+        <h2>Matching Donors:</h2>
+        {% if matching_donors %}
+        <ul>
+            {% for donor in matching_donors %}
+                <li>
+                    Name: {{ donor.full_name }}<br>
+                    Blood Type: {{ donor.blood_group }}<br>
+                    Contact Info: {{ donor.phone_number }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No matching donors found.</p>
+    {% endif %}
+        <h5>Click to go to <a href="{% url 'home' %}">home page</a></h5>
+    </body>
+</html>

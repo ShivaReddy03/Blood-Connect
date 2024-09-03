@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            background-color: rgb(193, 15, 15);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            background-color: white; /* Semi-transparent white */
+            border-radius: 10px;
+            margin-top:20%;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .box button {
+            background-color: #007bff; /* Bootstrap primary color */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .box button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="{% url 'Donor:donate_req'%}"><button><h1>Donor</h1></button></a>
+        <a href="{% url 'Patient:request_blood'%}"><button><h1>Patient</h1></button></a>
+    </div>
+</body>
+</html>
